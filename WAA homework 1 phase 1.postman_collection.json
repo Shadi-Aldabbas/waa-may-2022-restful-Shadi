@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "030dfc34-edda-4f74-a6c8-7cb21e0a7a1a",
+		"name": "WAA homework 1 phase 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "get one Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "shadi eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hhZGkiLCJpYXQiOjE2NTA1NDI2MDcsImV4cCI6MTY1MDU0NjIwN30.UtwI13-EKWjZp9KhYjDecDcQjJ6P78OkJrILpbUUsjI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"WAA\",\r\n    \"code\":\"CS562\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "shadi eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hhZGkiLCJpYXQiOjE2NTA1NDI2MDcsImV4cCI6MTY1MDU0NjIwN30.UtwI13-EKWjZp9KhYjDecDcQjJ6P78OkJrILpbUUsjI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"WAA\",\r\n    \"code\":\"CS562\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get courses by student ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v2/CoursesByStudentId/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"CoursesByStudentId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "update student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"fname\":\"Shadi\",\r\n    \"lname\":\"Aldabbas\",\r\n    \"email\":\"abc\",\r\n    \"major\":\"abc\",\r\n    \"gpa\":3.33,\r\n    \"courses\":[\r\n        {\r\n        \"id\":1,\r\n        \"name\":\"bro\",\r\n        \"code\":\"CS562\"\r\n        },\r\n        {\r\n        \"id\":2,\r\n        \"name\":\"WAA\",\r\n        \"code\":\"CS562\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"fname\":\"Shadi\",\r\n    \"lname\":\"Aldabbas\",\r\n    \"email\":\"abc\",\r\n    \"major\":\"abc\",\r\n    \"gpa\":3.33,\r\n    \"courses\":[\r\n        {\r\n        \"id\":1,\r\n        \"name\":\"bro\",\r\n        \"code\":\"CS562\"\r\n        },\r\n        {\r\n        \"id\":2,\r\n        \"name\":\"WAA\",\r\n        \"code\":\"CS562\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"fname\":\"Shadi\",\r\n    \"lname\":\"Aldabbas\",\r\n    \"email\":\"abc\",\r\n    \"major\":\"abc\",\r\n    \"gpa\":3.33,\r\n    \"courses\":[\r\n        {\r\n        \"id\":1,\r\n        \"name\":\"bro\",\r\n        \"code\":\"CS562\"\r\n        },\r\n        {\r\n        \"id\":2,\r\n        \"name\":\"WAA\",\r\n        \"code\":\"CS562\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one student",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"fname\":\"Shadi\",\r\n    \"lname\":\"Aldabbas\",\r\n    \"email\":\"abc\",\r\n    \"major\":\"abc\",\r\n    \"gpa\":3.33,\r\n    \"courses\":[\r\n        {\r\n        \"id\":1,\r\n        \"name\":\"bro\",\r\n        \"code\":\"CS562\"\r\n        },\r\n        {\r\n        \"id\":2,\r\n        \"name\":\"WAA\",\r\n        \"code\":\"CS562\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all student",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"fname\":\"Shadi\",\r\n    \"lname\":\"Aldabbas\",\r\n    \"email\":\"abc\",\r\n    \"major\":\"abc\",\r\n    \"gpa\":3.33,\r\n    \"courses\":[\r\n        {\r\n        \"id\":1,\r\n        \"name\":\"bro\",\r\n        \"code\":\"CS562\"\r\n        },\r\n        {\r\n        \"id\":2,\r\n        \"name\":\"WAA\",\r\n        \"code\":\"CS562\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get students by major",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v2/studentsByMajor/abc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"studentsByMajor",
+								"abc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
